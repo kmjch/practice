@@ -8,3 +8,7 @@ def compete_scores(a0, a1, a2, b0, b1, b2):
         elif a > b:
             alice += 1
     return alice, bob
+
+
+def birthdayCakeCandles(n, ar):
+    return ar.count(max(ar))
