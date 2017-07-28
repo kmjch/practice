@@ -11,7 +11,7 @@ def compete_scores(a0, a1, a2, b0, b1, b2):
 
 
 def birthdayCakeCandles(n, ar):
-    # only the tallest candles are 
+    # only the tallest candles are blown out
     # ar = array of heights of each candle
     return ar.count(max(ar))
 
@@ -42,3 +42,18 @@ def time_conversion(s):
         else:
             return str(int(s[:2]) + 12) + s[2:-2]
     return s[:-2]
+
+
+def plus_minus(n, arr):
+    pos = 0
+    neg = 0
+    zer = 0
+    n = float(n)
+    for num in arr:
+        if num > 0:
+            pos += 1
+        elif num < 0:
+            neg += 1
+        else:
+            zer += 1
+    return str(pos/n) + "\n" + str(neg/n) + "\n" + str(zer/n)
