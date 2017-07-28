@@ -57,3 +57,14 @@ def plus_minus(n, arr):
         else:
             zer += 1
     return str(pos/n) + "\n" + str(neg/n) + "\n" + str(zer/n)
+
+
+def staircase(n):
+    spaces = n - 1
+    string = "#"
+    output = ""
+    while spaces > 0:  # 1
+        print " " * spaces + string  # " #####"
+        string += "#"  # "######"
+        spaces -= 1  # 0
+    return "#" * n
