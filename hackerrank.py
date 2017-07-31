@@ -68,3 +68,10 @@ def staircase(n):
         string += "#"  # "######"
         spaces -= 1  # 0
     return "#" * n
+
+
+def mini_max_sum(arr):
+    arr.sort()
+    max_num = sum(arr[1:])
+    min_num = sum(arr[:-1])
+    return str(min_num) + " " + str(max_num)
