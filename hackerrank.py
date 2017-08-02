@@ -86,3 +86,7 @@ def mini_max_sum(arr):
     max_num = sum(arr[1:])
     min_num = sum(arr[:-1])
     return str(min_num) + " " + str(max_num)
+
+
+def grading_students(grades):
+    
