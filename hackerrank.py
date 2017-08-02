@@ -59,6 +59,17 @@ def plus_minus(n, arr):
     return str(pos/n) + "\n" + str(neg/n) + "\n" + str(zer/n)
 
 
+def diagonal_difference(n, matrix):
+    left_to_right = [(a, a) for a in range(n)]
+    right_to_left = [(a, b) for a, b in zip(range(n - 1, -1, -1), range(n))]
+    left_to_right_sum, right_to_left_sum = 0, 0
+    for index, row_num in left_to_right:
+        left_to_right_sum += matrix[row_num][index]
+    for index, row_num in right_to_left:
+        right_to_left_sum += matrix[row_num][index]
+    return abs(left_to_right_sum - right_to_left_sum)
+
+
 def staircase(n):
     spaces = n - 1
     string = "#"
