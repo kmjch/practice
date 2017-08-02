@@ -88,5 +88,15 @@ def mini_max_sum(arr):
     return str(min_num) + " " + str(max_num)
 
 
-def grading_students(grades):
-    
+def solve(grades):
+    output = []
+    for grade in grades:
+        if grade < 38:
+            output.append(grade)
+        elif grade % 10 == 3 or grade % 10 == 8:
+            output.append(grade + 2)
+        elif grade % 10 == 4 or grade % 10 == 9:
+            output.append(grade + 1)
+        else:
+            output.append(grade)
+    return output
