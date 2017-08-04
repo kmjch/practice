@@ -100,3 +100,49 @@ def solve(grades):
         else:
             output.append(grade)
     return output
+
+
+def add_in_order(array1, array2):
+
+    if not array1:
+        return array2
+    if not array2:
+        return array1
+
+    result = []
+    pointer1, pointer2 = 0, 0
+
+    while pointer1 < len(array1) and pointer2 < len(array2):
+        if array1[pointer1] < array2[pointer2]:
+            result.append(array1[pointer1])
+            pointer1 += 1
+        else:
+            result.append(array2[pointer2])
+            pointer2 += 1
+
+    if pointer2 < len(array2):
+        result += array2[pointer2:]
+    elif pointer1 < len(array1):
+        result += array1[pointer1:]
+
+    return result
+
+
+def find_top_two_most_common(array):
+    count_dict = {}
+    for item in array:
+        if item in count_dict:
+            count_dict.get(item) += 1
+        else:
+            count_dict[item] = 1
+    most_common1 = 0
+    most_common2 = 0
+
+    values_list = count_dict.values()
+    values_list.sort()
+    most_common = values_list[-2::-1]
+
+    for item in count_dict:
+        if count_dict[item] in most_common:
+
+
