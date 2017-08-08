@@ -128,21 +128,22 @@ def add_in_order(array1, array2):
     return result
 
 
-def find_top_two_most_common(array):
-    count_dict = {}
-    for item in array:
-        if item in count_dict:
-            count_dict.get(item) += 1
-        else:
-            count_dict[item] = 1
-    most_common1 = 0
-    most_common2 = 0
+# def find_top_two_most_common(array):
+#     count_dict = {}
+#     for item in array:
+#         if item in count_dict:
+#             count_dict.get(item) += 1
+#         else:
+#             count_dict[item] = 1
+#     most_common1 = 0
+#     most_common2 = 0
 
-    values_list = count_dict.values()
-    values_list.sort()
-    most_common = values_list[-2::-1]
+#     values_list = count_dict.values()
+#     values_list.sort()
+#     most_common = values_list[-2:]
 
-    for item in count_dict:
-        if count_dict[item] in most_common:
+#     for item in count_dict:
+#         if count_dict[item] in most_common:
+
 
 
